@@ -40,8 +40,6 @@ flow/*.met
 flow/*.opennet
 
 # Platforms
-flow/platforms/*
-!flow/platforms/nangate45
 # network
 .nfs*
 
@@ -52,3 +50,5 @@ core.*
 # git
 **/.git
 **/.gitignore
+scratch
+results

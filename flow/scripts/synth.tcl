@@ -38,10 +38,14 @@ if {[info exist ::env(CLKGATE_MAP_FILE)]} {
 
 # Generic synthesis
 synth  -top $::env(DESIGN_NAME) -flatten
+stat
+lsoracle -lso_exe /OpenROAD-flow/tools/build/LSOracle/build/core/lsoracle
+stat
 
+techmap
 # Optimize the design
 opt -purge
-
+stat
 # Technology mapping of latches
 if {[info exist ::env(LATCH_MAP_FILE)]} {
   techmap -map $::env(LATCH_MAP_FILE)
